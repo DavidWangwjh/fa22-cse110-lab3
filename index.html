@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Team A Meeting Minutes</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+  </head>
+  <body>
+    <header>
+        <h1>
+            Team A Brainstorm
+        </h1>
+        <p>
+            <b>meeting date: 10/09/2022</b>
+        </p>
+    </header>    
+    <nav>
+        <a href="#agenda">Agenda</a> |
+        <a href="#notes">Notes</a> |
+        <a href="#media">Media</a> |
+        <a href="#attendance">Attendance</a> |
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section id="agenda">
+            <h2>
+                Agenda
+            </h2>
+            <ol>
+                <li>discuss topics from last meeting - 30 minutes</li>
+                <li>brainstorm new design - 1 hour</li>
+                <li>break - 15 minutes</li>
+                <li>discuss designs - 45 minutes</li>
+                <li>vote for design - 10 minutes</li>
+                <li>schedule next meeting - 10 minutes</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="notes">
+            <h2>Notes</h2>
+                <h3>Ideas</h3>
+                <ul>
+                    <li><em>Must</em> use <strong>more image</strong> instead of <span>text</span>. by <i>John</i></li>
+                    <li>Extend the deadline by 2 weeks. by <i>Kevin</i></li>
+                </ul>
+                
+
+                <h3>Summary</h3>
+                <p>More images will be used, and deadline will be extended to ensure the quality</p>
+                
+            <div></div>
+
+        </section>
+
+        <hr>
+
+        <section id="media">
+            <h2>Media</h2>
+            <details>
+                <summary>expand</summary>
+                <img src="assets/image.png" alt="html image"/>  
+                <audio controls>  
+                    <source src="assets/audio.mp3" type="audio/mpeg">
+                </audio>
+                <video controls>  
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+            </details>
+        </section>
+
+        <hr>
+
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <ul>
+                <li>David</li>
+                <li>John</li>
+                <li>Kevin</li>
+                <li>James</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="feedback">
+            <h2>Feedback</h2>
+            <form>
+                <fieldset>
+                    <legend>Meeting Feedback</legend>
+                    <label for="name">Enter name</label>
+                    <input type="text" id="name" name="name"><br>
+
+                    <textarea rows="5" cols="30"></textarea><br>
+                    <label>
+                        Select a day
+                        <input type="text" list="Days">  
+                        <datalist id="Days">  
+                            <option value="Monday">  
+                            <option value="Tuesday">
+                            <option value="Wednesday">
+                            <option value="Thursday">  
+                            <option value="Friday">
+                        </datalist>
+                    </label>
+                    </br>
+                    <label>
+                        Select your preference
+                        <select>  
+                            <option>In Person</option>  
+                            <option>Remote</option>
+                        </select>
+                    </label>
+                    </br>
+                    <button>Submit</button>  
+                </fieldset>  
+            </form>  
+        </section>     
+    </main>
+    <footer>created by David Wang</footer>
+  </body>
+</html>
