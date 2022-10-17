@@ -4,17 +4,27 @@
     <title>Team A Meeting Minutes</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Universal Selector */
+        * { 
+            color: rgb(40, 40, 40);
+        }
+    </style>
   </head>
   <body>
-    <header>
+    <header class="title">
         <h1>
             Team A Brainstorm
         </h1>
-        <p>
+        <p title="date">
             <b>meeting date: 10/09/2022</b>
         </p>
     </header>    
-    <nav>
+    <nav class="menu">
         <a href="#agenda">Agenda</a> |
         <a href="#notes">Notes</a> |
         <a href="#media">Media</a> |
@@ -32,48 +42,50 @@
             <ol>
                 <li>discuss topics from last meeting - 30 minutes</li>
                 <li>brainstorm new design - 1 hour</li>
-                <li>break - 15 minutes</li>
+                <li id="break">break - 15 minutes</li>
                 <li>discuss designs - 45 minutes</li>
                 <li>vote for design - 10 minutes</li>
                 <li>schedule next meeting - 10 minutes</li>
             </ol>
         </section>
 
-        <hr>
+
 
         <section id="notes">
             <h2>Notes</h2>
                 <h3>Ideas</h3>
-                <ul>
-                    <li><em>Must</em> use <strong>more image</strong> instead of <span>text</span>. by <i>John</i></li>
-                    <li>Extend the deadline by 2 weeks. by <i>Kevin</i></li>
-                </ul>
-                
-
+                <details>
+                    <summary>expand</summary>
+                    <em>Must</em> use <strong>more image</strong> instead of <span>text</span>. by <i>John</i><br>
+                    Extend the deadline by 2 weeks. by <i>Kevin</i>
+                </details>
+                <hr>
                 <h3>Summary</h3>
-                <p>More images will be used, and deadline will be extended to ensure the quality</p>
-                
-            <div></div>
-
+                <div class="summary">
+                    <p class="block">Duis consequat dui nec nisi volutpat eleifend. </p>
+                    Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+                    <p class="inline-block" style="font-family: Helvetica">Nullam sit amet turpis elementum ligula vehicula consequat.</p>
+                    Morbi a ipsum.
+                </div>
         </section>
 
-        <hr>
 
         <section id="media">
             <h2>Media</h2>
-            <details>
-                <summary>expand</summary>
-                <img src="assets/image.png" alt="html image">  
+            <div class="flex-container">
+                <p>This is an image</p> 
+                <img src="assets/image.png" alt="html image"> 
+                <p>This is an audio</p> 
                 <audio controls>  
                     <source src="assets/audio.mp3" type="audio/mpeg">
                 </audio>
+                <p>This is a video</p> 
                 <video controls>  
                     <source src="assets/video.mp4" type="video/mp4">
                 </video>
-            </details>
+            </div>
         </section>
 
-        <hr>
 
         <section id="attendance">
             <h2>Attendance</h2>
@@ -85,8 +97,6 @@
             </ul>
         </section>
 
-        <hr>
-
         <section id="feedback">
             <h2>Feedback</h2>
             <form>
@@ -94,9 +104,12 @@
                     <legend>Meeting Feedback</legend>
                     <label for="name">Enter name</label>
                     <input type="text" id="name" name="name"><br>
-
-                    <textarea rows="5" cols="30"></textarea><br>
-                    <label>
+                    <label class="question">
+                        Enter your feedback<br>
+                        <textarea rows="5" cols="30"></textarea>
+                    </label>
+                    <br>
+                    <label class="question">
                         Select a day
                         <input type="text" list="Days">  
                         <datalist id="Days">  
@@ -108,7 +121,7 @@
                         </datalist>
                     </label>
                     <br>
-                    <label>
+                    <label class="question">
                         Select your preference
                         <select>  
                             <option>In Person</option>  
