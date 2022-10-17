@@ -1,0 +1,123 @@
+/* Class Selector */
+.title {
+    background-color: rgb(55, 152, 237);
+    color: #5d4141;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    flex-basis: auto;
+    border: 5px solid #FF0000;
+    margin: 10px 10px 10px 10px;
+    justify-content: space-between;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.summary {
+    max-width: 200pt;
+}
+
+/* ID Selector */
+#notes {
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#break {
+    background-color: bisque;
+    min-width: none;
+}
+
+/* Element Selector */
+nav {
+    text-align: center;
+    border-style: dotted; 
+    border-color: hsl(120, 90%, 50%);
+    border-width: 0.5cm;
+    border-radius: 10%;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 3rem 2rem 3rem;
+    height: auto;
+    width: 500px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 5vw;
+    padding: 5vw 5vw 5vw 5vw;
+    margin: auto;
+}
+
+/* Attribute Selector */
+p[title="date"] {
+    background-color: rgb(162, 162, 59);
+}
+
+/* Pseudo-class Selector */
+.menu a:hover {
+    background-color: rgb(125, 232, 25);
+    color: black;
+}
+  
+.menu a:active {
+    background-color: rgb(76, 116, 38);
+    color: white;
+}
+
+/* Selector List */
+h1, h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Descendant Combinator */
+section h2{
+    background-color: rgb(125, 125, 241);
+}
+
+/* Child Combinator */
+ul > li {
+    margin: 5mm;
+    padding-top: 5mm;
+    padding-right: 5mm;
+    padding-bottom: 5mm;
+    padding-left: 5mm;
+}
+
+/* General sibling combinator */
+img ~ p {
+    color: red;
+    position: sticky;
+}
+
+/* Adjacent sibling combinator */
+img + p {
+    font-weight: bold;
+}
+
+/* Combining Two Selectors */
+label.question {
+    color: red;
+}
+
+/* Media Query */
+@media (max-width: 100px) {
+    body {
+        margin: 5pt;
+    }
+}
